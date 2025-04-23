@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CRT Television Simulator</title>
+    <meta
+      name="description"
+      content="Play your own videos or games on this realistic CRT TV Simulator, powered by Javascript. You can play links or upload MP4 files. It simulates the aperture-grill and flickering (optional) of a CRT Television, it also has a VHS filter mode and picture settings control (saturation, contrast, etc)."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="darkreader-lock" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/crt-tv/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="/images/favicon/crt-tv/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/crt-tv/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="CRT TV" />
+    <link rel="manifest" href="/images/favicon/crt-tv/site.webmanifest" />
+    <link rel="canonical" href="https://frutigeraeroarchive.org/" />
+    <link rel="stylesheet" href="css/crt-tv.css" />
+    <noscript>
+      <style>
+        .view-counter-container,
+        .nav-sound-fx-container {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <main id="crtMain">
+      <div class="crt-container">
+        <div class="crt-top"></div>
+
+        <div class="crt-middle">
+          <div class="crt-middle-left">
+            <div class="crt-speakers"></div>
+          </div>
+
+          <div class="crt-middle-middle">
+            <span id="osdInput">AV1</span>
+            <span id="osdInput3"
+              >PLAY <img src="images/crt-tv/vhs-play.png"
+            /></span>
+            <span id="osdInput4">00:00:00</span>
+            <span id="osd"></span>
+            <img
+              src="images/crt-tv/static.gif"
+              class="js-content"
+              id="static"
+            />
+            <img src="images/crt-tv/vhs.gif" id="vhsFilter" />
+            <img src="images/crt-tv/vhs2.gif" id="vhsFilter2" />
+            <div id="screendoorEffect"></div>
+            <div id="flickering"></div>
+
+            <!-- JS Version -->
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              class="js-content"
+              id="crtOutput"
+            ></iframe>
+
+            <!-- No JS Version -->
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              id="crtOutputNonJS"
+              class="non-js-content"
+            ></iframe>
+          </div>
+
+          <div class="crt-middle-right">
+            <div class="crt-speakers"></div>
+          </div>
+        </div>
+
+        <div class="crt-bottom">
+          <img
+            src="images/crt-tv/sony.png"
+            alt="Sony Logo"
+            title="Brand: Sony"
+            class="crt-brand"
+          />
+
+          <div class="crt-bottom-bottom">
+            <div class="function-buttons">
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="powerSwitch"
+                  title="Power Switch"
+                >
+                  Power
+                </button>
+                <button
+                  class="led-lights js-content"
+                  id="powerLED"
+                  title="Power LED"
+                ></button>
+                <button class="led-lights" id="vhsLED" title="VHS LED"></button>
+              </div>
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="reset"
+                  title="Reset Values"
+                >
+                  Reset
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="saturationUp"
+                  title="Saturation +10"
+                >
+                  S+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="saturationDown"
+                  title="Saturation -10"
+                >
+                  S-
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="contrastUp"
+                  title="Contrast +10"
+                >
+                  C+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="contrastDown"
+                  title="Contrast -10"
+                >
+                  C-
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessUp"
+                  title="Brightness +10"
+                >
+                  B+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessDown"
+                  title="Brightness -10"
+                >
+                  B-
+                </button>
+              </div>
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="zoomButton"
+                  title="Fill in screen"
+                >
+                  Zoom
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="vhsMode"
+                  title="VHS Filter"
+                >
+                  VHS
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="noiseMode"
+                  title="Film Grain / Noise"
+                >
+                  Noise
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="whineMode"
+                  title="15.7KHz Whine Sound"
+                >
+                  Whine
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="flickerMode"
+                  title="CRT Flickering"
+                >
+                  Flickering
+                </button>
+              </div>
+            </div>
+
+            <div class="composite-ports">
+              <div class="c-yellow" title="Video Input"></div>
+              <div class="c-white" title="Audio (L) Input"></div>
+              <div class="c-red" title="Audio (R) Input"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Stand Arm -->
+        <div class="crt-stand-arm"></div>
+        <!-- Table -->
+        <div class="crt-table">
+          <div class="crt-text-container">
+            <div class="site-links">
+              <a href="https://frutigeraeroarchive.org/" alt="My Website"
+                ><img
+                  src="images/buttons/frutigeraeroarchive_button.png"
+                  alt="88x31 - Frutiger Aero Archive"
+                  title="Back to Frutiger Aero Archive" /></a
+              ><img
+                src="images/buttons/affection.png"
+                alt="88x31 - Affection"
+                title="Made With Affection"
+              />
+            </div>
+
+            <div class="inputs-container">
+              <div>
+                <input
+                  type="text"
+                  id="crtInput"
+                  placeholder="Paste your (embed src=) or YouTube URL here:"
+                  title="On websites that propose it, you can find the embed button and paste the src link that is between quotations"
+                />
+                <button id="avInput" title="Play current URL">
+                  <img src="images/crt-tv/embed.png" alt="Network Symbol" />
+                  Embed
+                </button>
+                <button id="suggestions" title="Play current file">
+                  <img src="images/crt-tv/suggestions.png" alt="Media Symbol" />
+                  Suggestions
+                </button>
+              </div>
+
+              <div>
+                <input
+                  type="file"
+                  id="fileInput"
+                  title="Import a video file here"
+                />
+                <button id="fileUpload" title="Play current file">
+                  <img src="images/crt-tv/upload.png" alt="Disc Symbol" />
+                  Upload MP4
+                </button>
+                <button id="backgroundChanger" title="Change Background Image">
+                  <img
+                    src="images/crt-tv/background.png"
+                    alt="Background Symbol"
+                  />
+                  Wallpaper
+                </button>
+                <button id="instructions" title="Instructions">
+                  <img src="images/crt-tv/help.png" alt="i Symbol" />Help
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="non-js-content no-js-warning"
+          >Enable Javascript for the buttons to work.</span
+        >
+      </div>
+    </main>
+    <script src="javascript/crt-tv.js" async defer></script>
+    <!-- No JS -->
+    <noscript>
+      <style>
+        .js-content {
+          display: none;
+        }
+        .non-js-content {
+          display: block;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>
