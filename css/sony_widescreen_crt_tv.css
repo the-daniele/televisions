@@ -1,0 +1,653 @@
+/* Sanitize.CSS Library */
+::before,
+::after {
+  text-decoration: inherit; /* 1 */
+  vertical-align: inherit; /* 2 */
+}
+:where(:root) {
+  cursor: default; /* 1 */
+  line-height: 1.5; /* 2 */
+  overflow-wrap: break-word; /* 3 */
+  -moz-tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
+  -webkit-tap-highlight-color: transparent; /* 5 */
+  -webkit-text-size-adjust: 100%; /* 6 */
+}
+:where(body) {
+  margin: 0;
+}
+:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+}
+:where(hr) {
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
+}
+:where(nav) :where(ol, ul) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(nav li)::before {
+  content: "\200B";
+  float: left;
+}
+:where(pre) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
+}
+:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+:where(b, strong) {
+  font-weight: bolder;
+}
+:where(code, kbd, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+:where(small) {
+  font-size: 80%;
+}
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+:where(iframe) {
+  border-style: none;
+}
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+:where(table) {
+  border-collapse: collapse; /* 1 */
+  border-color: inherit; /* 2 */
+  text-indent: 0; /* 3 */
+}
+:where(button, input, select) {
+  margin: 0;
+}
+:where(button, [type="button" i], [type="reset" i], [type="submit" i]) {
+  -webkit-appearance: button;
+  appearance: button;
+}
+:where(fieldset) {
+  border: 1px solid #a0a0a0;
+}
+:where(progress) {
+  vertical-align: baseline;
+}
+:where(textarea) {
+  margin: 0; /* 1 */
+  resize: vertical; /* 3 */
+}
+:where([type="search" i]) {
+  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield;
+  outline-offset: -2px; /* 2 */
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+:where(dialog:not([open])) {
+  display: none;
+}
+:where(details > summary:first-of-type) {
+  display: list-item;
+}
+:where([aria-busy="true" i]) {
+  cursor: progress;
+}
+:where([aria-controls]) {
+  cursor: pointer;
+}
+:where([aria-disabled="true" i], [disabled]) {
+  cursor: not-allowed;
+}
+:where([aria-hidden="false" i][hidden]) {
+  display: initial;
+}
+:where([aria-hidden="false" i][hidden]:not(:focus)) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("/fonts/VCR_OSD_MONO.ttf") format("truetype");
+  font-weight: 200;
+}
+body {
+  background-color: #303030;
+  background: url("/televisions/images/crt-room.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: url("/images/cursors/normal.cur"), auto;
+}
+
+a:hover,
+button:hover {
+  text-decoration: underline;
+  cursor: url("/images/cursors/link.cur"), auto;
+}
+
+.non-js-content {
+  display: none;
+}
+
+#crtMain,
+.crt-container,
+.crt-middle-left,
+.crt-middle,
+.crt-middle-right,
+.crt-middle-middle,
+.crt-bottom,
+.crt-bottom-bottom,
+.buttons-groups-div,
+.function-buttons,
+.function-buttons-div,
+.composite-ports,
+.crt-text-container,
+.inputs-container,
+.inputs-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crt-middle,
+.crt-middle-left,
+.crt-middle-right {
+  background-color: #8a8a8a;
+}
+
+#crtMain {
+  min-height: 99.8vh;
+  margin-bottom: 2px;
+  z-index: 1;
+}
+.crt-container {
+  flex-direction: column;
+  width: 1100px;
+  margin: 20px;
+}
+.crt-top {
+  background: linear-gradient(180deg, #cac9c9 40%, #8a8a8a 60%);
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  color: #494949;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1em;
+}
+.crt-top span {
+  position: absolute;
+  top: 50px;
+  left: 90px;
+}
+.crt-middle-left,
+.crt-middle-right {
+  border-radius: 2px;
+  width: 100px;
+  height: 530px;
+}
+.crt-middle-left {
+  justify-content: flex-start;
+  padding-left: 6px;
+}
+.crt-middle-right {
+  justify-content: flex-end;
+  padding-right: 6px;
+}
+.crt-speakers {
+  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #8a8a8a 0,
+    #535353 0.4px,
+    #8a8a8a 0,
+    #535353 50%
+  );
+  border-radius: 3px;
+  height: 100%;
+  width: 70%;
+}
+.crt-middle {
+  width: 100%;
+  padding: 10px 0px;
+}
+.crt-middle-middle {
+  background: #080808;
+  border-top: 4px solid #707070;
+  border-bottom: 4px solid #707070;
+  border-left: 4px solid #9e9e9e;
+  border-right: 4px solid #9e9e9e;
+  border-radius: 2px;
+  flex-direction: column;
+  width: 1030px;
+  height: 510px;
+  overflow: hidden;
+}
+.crt-middle-middle img {
+  position: absolute;
+}
+
+/* Video Player */
+#crtOutput,
+#crtOutputNonJS {
+  background: black;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.5s;
+}
+#crtOutputNonJS {
+  filter: saturate(150%) contrast(110%) brightness(110%) blur(0.6px);
+}
+
+/* AV1 */
+#osdInput {
+  color: blue;
+  display: none;
+  position: absolute;
+  margin: 0px 0px 440px 800px;
+  font-size: 3em;
+  padding: 5px;
+  font-family: "VCR OSD Mono", sans-serif;
+  font-weight: 800;
+  z-index: 2;
+  pointer-events: none;
+}
+/* VHS PLAY */
+#osdInput3 {
+  color: #faf4f4;
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 460px -810px;
+  padding: 5px;
+  opacity: 0.8;
+  font-family: "VCR OSD Mono", sans-serif;
+  font-weight: 800;
+  font-size: 1.8em;
+  z-index: 2;
+  pointer-events: none;
+}
+#osdInput3 img {
+  width: 19px;
+  margin-left: 100px;
+}
+/* VHS Time */
+#osdInput4 {
+  color: #faf4f4;
+  display: none;
+  position: absolute;
+  margin: 850px 0px 390px 740px;
+  font-size: 1.8em;
+  padding: 5px;
+  font-weight: 800;
+  font-family: "VCR OSD Mono", sans-serif;
+  z-index: 2;
+  opacity: 0.8;
+  pointer-events: none;
+}
+/* Show values */
+#osd {
+  background-color: blue;
+  color: #ffffff;
+  display: none;
+  position: absolute;
+  margin-top: 445px;
+  font-size: 0.85em;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Filters */
+#static,
+#flickering,
+#vhsFilter,
+#vhsFilter2,
+#screendoorEffect {
+  width: 905px;
+  height: 510px;
+}
+#static {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+#vhsFilter {
+  z-index: 3;
+  opacity: 0.03;
+  pointer-events: none;
+  visibility: hidden;
+}
+#vhsFilter2 {
+  z-index: 3;
+  opacity: 0.15;
+  pointer-events: none;
+  visibility: hidden;
+}
+#screendoorEffect {
+  box-shadow: inset 0px 0px 3px 7px black;
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+#screendoorEffect::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.07),
+      rgba(0, 255, 0, 0.07),
+      rgba(0, 0, 255, 0.07)
+    );
+  z-index: 4;
+  background-size: 100% 2px, 2px 100%;
+  pointer-events: none;
+}
+#screendoorEffect::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+#flickering {
+  background: rgba(18, 16, 16, 0.1);
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+
+/* Bottom Part */
+.crt-bottom {
+  background: linear-gradient(0deg, #4e4e4e 10%, #8a8a8a 70%);
+  border-radius: 0 0 10px 10px;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 0px 15px 0px;
+  z-index: 1;
+}
+.crt-brand {
+  background: #444444;
+  padding: 3px;
+  width: 110px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.crt-bottom-bottom {
+  border: 2px solid #3f3f3f;
+  width: 670px;
+  height: 40px;
+}
+.function-buttons {
+  margin: 4px 8px 0px 0px;
+}
+.buttons-groups-div {
+  margin: 0px 6px 0px 6px;
+}
+.buttons-groups-div button {
+  background: linear-gradient(to bottom, #8a8a8a 30%, #646464 100%);
+  color: #2e2e2e;
+  border-top: 2px solid #3f3f3f;
+  border-left: 2px solid #3f3f3f;
+  border-right: 2px solid #3f3f3f;
+  border-bottom: 2px solid #3f3f3f;
+  padding: 2px 4px 3px 4px;
+  margin: 0px 2px;
+  font-size: 0.7em;
+  font-weight: bold;
+  cursor: url("/images/cursors/link.cur"), auto;
+}
+#powerSwitch {
+  width: 60px;
+  margin-right: 5px;
+}
+#flickerMode {
+  width: 80px;
+}
+.led-lights {
+  width: 13px;
+  height: 13px;
+}
+#powerLED {
+  background: #15ff00;
+  box-shadow: 1px 1px 20px 1px #15ff00;
+}
+#vhsLED {
+  background: black;
+}
+.crt-stand-arm {
+  background: #bebbb9;
+  background: linear-gradient(180deg, #242424 24%, #494949 72%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  width: 90%;
+  height: 10px;
+  margin-bottom: -5px;
+  border-radius: 0 0 45% 45%;
+  z-index: 1;
+}
+
+/* Table */
+.crt-table {
+  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #271c13 0,
+    #271c13 0.4px,
+    #38291c 0,
+    #38291c 50%
+  );
+  border-top: 28px solid #42301f;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.253);
+  width: 95%;
+  margin-top: -15px;
+}
+.crt-text-container {
+  gap: 12px;
+  padding: 13px 0px;
+}
+.inputs-container {
+  flex-direction: column;
+  gap: 5px;
+}
+.inputs-container div {
+  gap: 5px;
+}
+.inputs-container input {
+  background: linear-gradient(to bottom, #111111 0%, #242424 100%);
+  border: 1px solid #3b3b3b;
+  color: white;
+  padding: 3px 5px 5px 5px;
+  width: 300px;
+  height: 20px;
+}
+#fileInput {
+  width: 195px;
+}
+.inputs-container button {
+  background: linear-gradient(
+    to bottom,
+    #777777 0%,
+    #292929 50%,
+    #0a0a0a 51%,
+    #080808 60%,
+    #333333 100%
+  );
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  border: none;
+  color: #eff1f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  transition-duration: 0.3s;
+}
+.inputs-container button:hover {
+  filter: brightness(90%);
+  transition-duration: 0.3s;
+}
+
+#avInput img,
+#instructions img,
+#fileUpload img,
+#suggestions img,
+#backgroundChanger img {
+  width: 20px;
+  margin-right: 4px;
+}
+#fileUpload,
+#suggestions {
+  width: 110px !important;
+}
+#backgroundChanger {
+  width: 100px !important;
+}
+
+.site-links {
+  background-color: #241f1f;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.site-links img {
+  height: 29px;
+}
+.no-js-warning {
+  color: white;
+  font-size: 0.9em;
+}
+
+/* 16:10 Size */
+@media screen and (min-height: 1000px) {
+}
+
+/* Medium Size */
+@media screen and (max-height: 860px), screen and (max-width: 1050px) {
+}
+
+/* Small Size */
+@media screen and (max-height: 570px), screen and (max-width: 750px) {
+}
