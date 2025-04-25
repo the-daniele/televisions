@@ -40,7 +40,7 @@ sounds.CRT_WHINE.volume = 0.4;
 
 let tvOff = true;
 let s = 100,
-  c = 120,
+  c = 100,
   b = 110,
   f = 0.7;
 let vhsSettings = "sepia(0) grayscale(0) hue-rotate(5deg)";
@@ -135,7 +135,7 @@ const togglePower = () => {
     elements.STATIC.style.pointerEvents = "none";
     elements.VIDEO_OUTPUT.style.display = "block";
     elements.VIDEO_OUTPUT.src =
-      "https://www.youtube.com/embed/videoseries?list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp&autoplay=1";
+      "https://www.youtube-nocookie.com/embed/videoseries?si=s6ACIjBIWzRHCBcn&amp;list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp&autoplay=1";
     elements.STATIC.style.opacity = rfNoise ? "0.05" : "0";
     if (rfNoise) sounds.RF_NOISE_SOUND.play();
     if (vhsMode) {
@@ -168,7 +168,7 @@ const toggleVHSMode = () => {
     elements.VHS_FILTER.style.visibility = "hidden";
     elements.VHS_FILTER_2.style.visibility = "hidden";
     s = 100;
-    c = 120;
+    c = 100;
     b = 110;
     f = 0.7;
     vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";
@@ -181,10 +181,10 @@ const toggleVHSMode = () => {
     elements.VHS_LED.style.background = "black";
     elements.VHS_LED.style.boxShadow = "none";
   } else {
-    s = 130;
-    c = 110;
-    b = 120;
-    f = 0.7;
+    s = 100;
+    c = 100;
+    b = 110;
+    f = 0.9;
     vhsSettings = "sepia(0.1) grayscale(0.1) hue-rotate(13deg)";
     updateSettings();
     elements.VHS_FILTER.style.visibility = "visible";
@@ -255,10 +255,10 @@ elements.vhsButton.addEventListener("click", () => {
 
 elements.RESET_BUTTON.addEventListener("click", () => {
   playAudio(new Audio("/sounds/click.mp3"));
-  s = vhsMode ? 130 : 100;
-  c = 120;
-  b = vhsMode ? 120 : 110;
-  f = vhsMode ? 0.7 : 0.7;
+  s = vhsMode ? 100 : 100;
+  c = 100;
+  b = vhsMode ? 110 : 110;
+  f = vhsMode ? 0.9 : 0.7;
   updateSettings();
   showOSD();
 });
@@ -355,7 +355,7 @@ elements.PLAY_LINK_BUTTON.addEventListener("click", () => {
   elements.OSD_INPUT_3.style.display = "none";
   elements.OSD_INPUT_4.style.display = "none";
   s = 100;
-  c = 120;
+  c = 100;
   b = 110;
   f = 0.7;
   vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";
@@ -400,7 +400,7 @@ elements.FILE_UPLOAD_BUTTON.addEventListener("click", () => {
     elements.OSD_INPUT_3.style.display = "none";
     elements.OSD_INPUT_4.style.display = "none";
     s = 100;
-    c = 120;
+    c = 100;
     b = 110;
     f = 0.7;
     vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";

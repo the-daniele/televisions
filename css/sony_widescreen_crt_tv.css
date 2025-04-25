@@ -188,7 +188,7 @@ button:hover {
 .crt-middle,
 .crt-middle-left,
 .crt-middle-right {
-  background-color: #8a8a8a;
+  background-color: #9e9e9e;
 }
 
 #crtMain {
@@ -202,19 +202,19 @@ button:hover {
   margin: 20px;
 }
 .crt-top {
-  background: linear-gradient(180deg, #cac9c9 40%, #8a8a8a 60%);
+  background: linear-gradient(180deg, #cac9c9 40%, #9e9e9e 60%);
   border-radius: 5px 5px 0 0;
   width: 100%;
   height: 60px;
   position: relative;
+}
+.crt-top span {
   color: #494949;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.1em;
-}
-.crt-top span {
   position: absolute;
-  top: 50px;
-  left: 90px;
+  top: 51px;
+  left: 97px;
 }
 .crt-middle-left,
 .crt-middle-right {
@@ -234,10 +234,10 @@ button:hover {
   background-size: 4px 4px;
   background-image: repeating-linear-gradient(
     45deg,
-    #8a8a8a 0,
-    #535353 0.4px,
-    #8a8a8a 0,
-    #535353 50%
+    #9e9e9e 0,
+    #696969 0.4px,
+    #9e9e9e 0,
+    #696969 50%
   );
   border-radius: 3px;
   height: 100%;
@@ -249,10 +249,10 @@ button:hover {
 }
 .crt-middle-middle {
   background: #080808;
-  border-top: 4px solid #707070;
-  border-bottom: 4px solid #707070;
-  border-left: 4px solid #9e9e9e;
-  border-right: 4px solid #9e9e9e;
+  border-top: 4px solid #818181;
+  border-bottom: 4px solid #818181;
+  border-left: 4px solid #b6b6b6;
+  border-right: 4px solid #b6b6b6;
   border-radius: 2px;
   flex-direction: column;
   width: 1030px;
@@ -478,22 +478,39 @@ button:hover {
 
 /* Bottom Part */
 .crt-bottom {
-  background: linear-gradient(0deg, #4e4e4e 10%, #8a8a8a 70%);
-  border-radius: 0 0 10px 10px;
+  background: linear-gradient(to top, #757575 10%, #b9b9b9 45%, #9e9e9e 100%);
+  border-radius: 0 0 20% 20%;
   flex-direction: column;
   width: 100%;
   padding: 5px 0px 15px 0px;
   z-index: 1;
 }
+.crt-brand-container {
+  width: 135px;
+  height: 39px;
+  position: relative;
+}
 .crt-brand {
-  background: #444444;
   padding: 3px;
   width: 110px;
-  margin-bottom: 15px;
   opacity: 0.9;
+  z-index: 2;
+  top: 0px;
+  position: absolute;
+}
+.crt-brand-plate {
+  background: linear-gradient(to bottom, #858585 10%, #919191 100%);
+  border: 1px solid #646464;
+  height: 12px;
+  width: 92px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  z-index: 1;
 }
 .crt-bottom-bottom {
-  border: 2px solid #3f3f3f;
+  border: 2px solid #696969;
+  border-bottom: 2px solid #5a5a5a;
   width: 670px;
   height: 40px;
 }
@@ -504,12 +521,12 @@ button:hover {
   margin: 0px 6px 0px 6px;
 }
 .buttons-groups-div button {
-  background: linear-gradient(to bottom, #8a8a8a 30%, #646464 100%);
+  background: linear-gradient(to bottom, #b9b9b9 30%, #8b8b8b 100%);
   color: #2e2e2e;
-  border-top: 2px solid #3f3f3f;
-  border-left: 2px solid #3f3f3f;
-  border-right: 2px solid #3f3f3f;
-  border-bottom: 2px solid #3f3f3f;
+  border-top: 2px solid #696969;
+  border-left: 2px solid #696969;
+  border-right: 2px solid #696969;
+  border-bottom: 2px solid #707070;
   padding: 2px 4px 3px 4px;
   margin: 0px 2px;
   font-size: 0.7em;
@@ -535,11 +552,10 @@ button:hover {
   background: black;
 }
 .crt-stand-arm {
-  background: #bebbb9;
-  background: linear-gradient(180deg, #242424 24%, #494949 72%);
+  background: linear-gradient(180deg, #3d3d3d 24%, #616161 72%);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
-  width: 90%;
-  height: 10px;
+  width: 60%;
+  height: 5px;
   margin-bottom: -5px;
   border-radius: 0 0 45% 45%;
   z-index: 1;
@@ -642,12 +658,63 @@ button:hover {
 
 /* 16:10 Size */
 @media screen and (min-height: 1000px) {
-}
-
-/* Medium Size */
-@media screen and (max-height: 860px), screen and (max-width: 1050px) {
-}
-
-/* Small Size */
-@media screen and (max-height: 570px), screen and (max-width: 750px) {
+  .crt-container {
+    width: 1380px;
+  }
+  .crt-top {
+    height: 70px;
+  }
+  .crt-top span {
+    top: 58px;
+    left: 108px;
+    font-size: 1.2em;
+  }
+  .crt-middle-left,
+  .crt-middle-right {
+    width: 100px;
+    height: 670px;
+  }
+  .crt-middle-middle {
+    width: 1156px;
+    height: 650px;
+  }
+  #static,
+  #flickering,
+  #vhsFilter,
+  #vhsFilter2,
+  #screendoorEffect {
+    width: 1155px;
+    height: 650px;
+  }
+  .crt-brand-container {
+    height: 44px;
+  }
+  .crt-brand {
+    width: 130px;
+  }
+  .crt-brand-plate {
+    height: 14px;
+    width: 110px;
+    top: 8px;
+    left: 8px;
+  }
+  #osdInput {
+    margin: 0px 0px 580px 1050px;
+    font-size: 3em;
+  }
+  /* VHS PLAY */
+  #osdInput3 {
+    margin: 0px 0px 590px -1050px;
+  }
+  #osdInput3 img {
+    width: 19px;
+  }
+  /* VHS Time */
+  #osdInput4 {
+    margin: 980px 0px 390px 980px;
+  }
+  /* Show values */
+  #osd {
+    margin-top: 565px;
+  }
 }
