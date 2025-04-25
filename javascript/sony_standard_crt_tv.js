@@ -334,12 +334,21 @@ const commonPlaySetup = () => {
 
 // Convert YouTube URLs
 const getEmbeddedYouTubeURL = (url) => {
-  const regExp =
+  const videoRegExp =
     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w\-]{11})/;
-  const match = url.match(regExp);
-  if (match && match[1]) {
-    return `https://www.youtube-nocookie.com/embed/${match[1]}?autoplay=1`;
+  const playlistRegExp =
+    /(?:https?:\/\/)?(?:www\.)?youtube\.com\/playlist\?list=([\w\-]+)/;
+
+  const videoMatch = url.match(videoRegExp);
+  if (videoMatch && videoMatch[1]) {
+    return `https://www.youtube-nocookie.com/embed/${videoMatch[1]}?autoplay=1`;
   }
+
+  const playlistMatch = url.match(playlistRegExp);
+  if (playlistMatch && playlistMatch[1]) {
+    return `https://www.youtube-nocookie.com/embed/videoseries?list=${playlistMatch[1]}&autoplay=1`;
+  }
+
   return url; // Return original if not a recognized YouTube link
 };
 

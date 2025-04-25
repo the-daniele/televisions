@@ -363,7 +363,7 @@ button:hover {
   visibility: hidden;
 }
 #screendoorEffect {
-  box-shadow: inset 0px 0px 3px 7px black;
+  box-shadow: inset 0px 0px 1px 6px black;
   position: absolute;
   z-index: 4;
   pointer-events: none;
@@ -683,7 +683,7 @@ button:hover {
   #vhsFilter,
   #vhsFilter2,
   #screendoorEffect {
-    width: 1155px;
+    width: 1157px;
     height: 650px;
   }
   .crt-brand-container {
