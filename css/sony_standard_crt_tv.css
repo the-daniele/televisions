@@ -228,7 +228,7 @@ button:hover {
 .crt-middle-left,
 .crt-middle-right {
   border-radius: 2px;
-  width: 33px;
+  width: 30px;
   height: 510px;
 }
 .crt-middle-left {
@@ -362,9 +362,7 @@ button:hover {
 }
 #screendoorEffect {
   border-top: 4px solid #161616;
-  border-bottom: 4px solid #333333;
-  border-left: 4px solid #1f1f1f;
-  border-right: 4px solid #1f1f1f;
+  border-bottom: 4px solid #161616;
   position: absolute;
   z-index: 4;
   pointer-events: none;

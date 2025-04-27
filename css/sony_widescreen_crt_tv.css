@@ -188,7 +188,7 @@ button:hover {
 .crt-middle,
 .crt-middle-left,
 .crt-middle-right {
-  background-color: #9e9e9e;
+  background-color: #949497;
 }
 
 #crtMain {
@@ -202,10 +202,16 @@ button:hover {
   margin: 20px;
 }
 .crt-top {
-  background: linear-gradient(180deg, #cac9c9 40%, #9e9e9e 60%);
-  border-radius: 5px 5px 0 0;
+  background: linear-gradient(
+    to bottom,
+    #5a5a5f 1%,
+    #bdbdc4 8%,
+    #bdbdc4 40%,
+    #949497 60%
+  );
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 60px;
+  height: 65px;
   position: relative;
 }
 .crt-top span {
@@ -213,14 +219,13 @@ button:hover {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.1em;
   position: absolute;
-  top: 51px;
+  top: 48px;
   left: 97px;
 }
 .crt-middle-left,
 .crt-middle-right {
-  border-radius: 2px;
   width: 100px;
-  height: 530px;
+  height: 515px;
 }
 .crt-middle-left {
   justify-content: flex-start;
@@ -229,31 +234,74 @@ button:hover {
 .crt-middle-right {
   justify-content: flex-end;
   padding-right: 6px;
+  position: relative;
+}
+.side-ports {
+  background: #4a4b4e;
+  border-top: 10px solid #5e6064;
+  border-bottom: 10px solid #5e6064;
+  border-right: 2px solid #5e6064;
+  box-shadow: inset -3px 5px 10px 0px #1f1f1f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 35px;
+  height: 180px;
+  position: absolute;
+  left: 94px;
+  padding-top: 5px;
+}
+.jack {
+  background: #000000;
+  border: 2px solid #5f5f61;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+}
+.composite {
+  margin-top: 25px;
+}
+.c-yellow,
+.c-white,
+.c-red {
+  background: #000000;
+  border: 1px solid #5f5f61;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin-top: 6px;
+}
+.c-yellow {
+  border: 3px solid #cece0a;
+}
+.c-white {
+  border: 3px solid #dfdfdf;
+}
+.c-red {
+  border: 3px solid #c00202;
 }
 .crt-speakers {
   background-size: 4px 4px;
   background-image: repeating-linear-gradient(
     45deg,
-    #9e9e9e 0,
-    #696969 0.4px,
-    #9e9e9e 0,
-    #696969 50%
+    #949497 0,
+    #242425 0.4px,
+    #949497 0,
+    #242425 50%
   );
-  border-radius: 3px;
   height: 100%;
-  width: 70%;
+  width: 80%;
 }
 .crt-middle {
   width: 100%;
   padding: 10px 0px;
 }
 .crt-middle-middle {
-  background: #080808;
-  border-top: 4px solid #818181;
-  border-bottom: 4px solid #818181;
-  border-left: 4px solid #b6b6b6;
-  border-right: 4px solid #b6b6b6;
-  border-radius: 2px;
+  border-top: 4px solid #6f6f74;
+  border-bottom: 4px solid #a6a6ad;
+  border-left: 4px solid #bfbfc7;
+  border-right: 4px solid #bfbfc7;
   flex-direction: column;
   width: 1030px;
   height: 510px;
@@ -363,7 +411,7 @@ button:hover {
   visibility: hidden;
 }
 #screendoorEffect {
-  box-shadow: inset 0px 0px 1px 6px black;
+  box-shadow: inset 0px 0px 1px 10px black;
   position: absolute;
   z-index: 4;
   pointer-events: none;
@@ -478,55 +526,50 @@ button:hover {
 
 /* Bottom Part */
 .crt-bottom {
-  background: linear-gradient(to top, #757575 10%, #b9b9b9 45%, #9e9e9e 100%);
-  border-radius: 0 0 20% 20%;
+  background: linear-gradient(to top, #4c4c4e 10%, #78787c 45%, #949497 100%);
+  border-radius: 0 0 50% 50%;
   flex-direction: column;
   width: 100%;
-  padding: 5px 0px 15px 0px;
+  padding: 15px 0px 25px 0px;
   z-index: 1;
 }
 .crt-brand-container {
-  width: 135px;
+  width: 115px;
   height: 39px;
   position: relative;
 }
 .crt-brand {
   padding: 3px;
-  width: 110px;
+  width: 100px;
   opacity: 0.9;
   z-index: 2;
-  top: 0px;
+  top: 10px;
   position: absolute;
 }
 .crt-brand-plate {
-  background: linear-gradient(to bottom, #858585 10%, #919191 100%);
+  background: linear-gradient(to bottom, #505052 10%, #67676b 100%);
   border: 1px solid #646464;
   height: 12px;
-  width: 92px;
+  width: 82px;
   position: absolute;
-  top: 7px;
+  top: 17px;
   left: 8px;
   z-index: 1;
 }
 .crt-bottom-bottom {
-  border: 2px solid #696969;
-  border-bottom: 2px solid #5a5a5a;
   width: 670px;
   height: 40px;
 }
 .function-buttons {
-  margin: 4px 8px 0px 0px;
+  margin: 15px 8px 0px 0px;
 }
 .buttons-groups-div {
   margin: 0px 6px 0px 6px;
 }
 .buttons-groups-div button {
-  background: linear-gradient(to bottom, #b9b9b9 30%, #8b8b8b 100%);
+  background: linear-gradient(to bottom, #9a9aa0 30%, #59595c 100%);
   color: #2e2e2e;
-  border-top: 2px solid #696969;
-  border-left: 2px solid #696969;
-  border-right: 2px solid #696969;
-  border-bottom: 2px solid #707070;
+  border: 1px solid #2e2e30;
   padding: 2px 4px 3px 4px;
   margin: 0px 2px;
   font-size: 0.7em;
@@ -534,15 +577,25 @@ button:hover {
   cursor: url("/images/cursors/link.cur"), auto;
 }
 #powerSwitch {
-  width: 60px;
-  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2e2e30;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+#powerSwitch img {
+  width: 10px;
 }
 #flickerMode {
   width: 80px;
 }
 .led-lights {
-  width: 13px;
-  height: 13px;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
 }
 #powerLED {
   background: #15ff00;
@@ -551,35 +604,60 @@ button:hover {
 #vhsLED {
   background: black;
 }
-.crt-stand-arm {
-  background: linear-gradient(180deg, #3d3d3d 24%, #616161 72%);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
-  width: 60%;
-  height: 5px;
-  margin-bottom: -5px;
-  border-radius: 0 0 45% 45%;
-  z-index: 1;
-}
 
 /* Table */
 .crt-table {
-  background-size: 4px 4px;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #271c13 0,
-    #271c13 0.4px,
-    #38291c 0,
-    #38291c 50%
-  );
-  border-top: 28px solid #42301f;
+  background-color: #111111;
+  border-top: 28px solid #1f1e1e;
   border-radius: 0 0 5px 5px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.253);
-  width: 95%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+  width: 100%;
   margin-top: -15px;
+  position: relative;
+  padding-bottom: 25px;
+}
+.crt-table-left,
+.crt-table-right {
+  position: absolute;
+  width: 180px;
+  height: 196px;
+  bottom: 0px;
+  z-index: 3;
+}
+.crt-table-left {
+  background: linear-gradient(30deg, #414040 15%, #333333 100%);
+  border-right: 3px solid #202020;
+  border-left: 2px solid #444444;
+}
+.crt-table-right {
+  background: linear-gradient(-30deg, #414040 15%, #333333 100%);
+  border-left: 3px solid #202020;
+  border-right: 2px solid #444444;
+  right: 0px;
+}
+.crt-table-left-top,
+.crt-table-right-top {
+  background: #202020;
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  bottom: 191px;
+}
+
+.crt-table-left-top {
+  border-left: 2px solid #444444;
+  left: 1px;
+  transform: rotate(20deg);
+}
+.crt-table-right-top {
+  border-right: 2px solid #444444;
+  right: 1px;
+  transform: rotate(-20deg);
 }
 .crt-text-container {
   gap: 12px;
   padding: 13px 0px;
+  margin-top: 20px;
 }
 .inputs-container {
   flex-direction: column;
@@ -593,11 +671,11 @@ button:hover {
   border: 1px solid #3b3b3b;
   color: white;
   padding: 3px 5px 5px 5px;
-  width: 300px;
+  width: 370px;
   height: 20px;
 }
 #fileInput {
-  width: 195px;
+  width: 265px;
 }
 .inputs-container button {
   background: linear-gradient(
@@ -654,67 +732,4 @@ button:hover {
 .no-js-warning {
   color: white;
   font-size: 0.9em;
-}
-
-/* 16:10 Size */
-@media screen and (min-height: 1000px) {
-  .crt-container {
-    width: 1380px;
-  }
-  .crt-top {
-    height: 70px;
-  }
-  .crt-top span {
-    top: 58px;
-    left: 108px;
-    font-size: 1.2em;
-  }
-  .crt-middle-left,
-  .crt-middle-right {
-    width: 100px;
-    height: 670px;
-  }
-  .crt-middle-middle {
-    width: 1156px;
-    height: 650px;
-  }
-  #static,
-  #flickering,
-  #vhsFilter,
-  #vhsFilter2,
-  #screendoorEffect {
-    width: 1157px;
-    height: 650px;
-  }
-  .crt-brand-container {
-    height: 44px;
-  }
-  .crt-brand {
-    width: 130px;
-  }
-  .crt-brand-plate {
-    height: 14px;
-    width: 110px;
-    top: 8px;
-    left: 8px;
-  }
-  #osdInput {
-    margin: 0px 0px 580px 1050px;
-    font-size: 3em;
-  }
-  /* VHS PLAY */
-  #osdInput3 {
-    margin: 0px 0px 590px -1050px;
-  }
-  #osdInput3 img {
-    width: 19px;
-  }
-  /* VHS Time */
-  #osdInput4 {
-    margin: 980px 0px 390px 980px;
-  }
-  /* Show values */
-  #osd {
-    margin-top: 565px;
-  }
 }
