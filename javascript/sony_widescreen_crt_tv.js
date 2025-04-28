@@ -135,7 +135,7 @@ const togglePower = () => {
     elements.STATIC.style.pointerEvents = "none";
     elements.VIDEO_OUTPUT.style.display = "block";
     elements.VIDEO_OUTPUT.src =
-      "https://www.youtube-nocookie.com/embed/videoseries?si=s6ACIjBIWzRHCBcn&amp;list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp&autoplay=1";
+      "https://www.youtube-nocookie.com/embed/videoseries?si=XSQL3aY9KZ6FLuFl&amp;list=PLbiQ_Jf57CBVfysa39Er-iad2c8UZg4L1&autoplay=1";
     elements.STATIC.style.opacity = rfNoise ? "0.05" : "0";
     if (rfNoise) sounds.RF_NOISE_SOUND.play();
     if (vhsMode) {
@@ -154,7 +154,7 @@ let zoomed_in = false;
 elements.ZOOM_BUTTON.addEventListener("click", () => {
   playAudio(new Audio("/sounds/click.mp3"));
   if (zoomed_in == false) {
-    elements.VIDEO_OUTPUT.style.transform = "scale(1.4)";
+    elements.VIDEO_OUTPUT.style.transform = "scale(1.33)";
     zoomed_in = true;
   } else {
     elements.VIDEO_OUTPUT.style.transform = "scale(1)";
