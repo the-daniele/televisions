@@ -78,7 +78,8 @@ const showOSDInput = () => {
 };
 
 const showOSD = () => {
-  elements.OSD.innerText = `Saturation: ${s} Contrast: ${c} Brightness: ${b}`;
+  const blurDisplay = f.toFixed(1); // Round 'f' to 2 decimal places
+  elements.OSD.innerText = `Saturation: ${s} Contrast: ${c} Brightness: ${b} Blur: ${blurDisplay}`;
   if (!tvOff) {
     elements.OSD.style.display = "block";
     clearTimeout(hideTimeoutId);
@@ -184,7 +185,7 @@ const toggleVHSMode = () => {
     s = 100;
     c = 100;
     b = 110;
-    f = 0.9;
+    f = 1.5;
     vhsSettings = "sepia(0.1) grayscale(0.1) hue-rotate(13deg)";
     updateSettings();
     elements.VHS_FILTER.style.visibility = "visible";
@@ -221,6 +222,9 @@ const controlConditions = {
   brightnessUp: () => {
     if (b < 200) b += 10;
   },
+  blurUp: () => {
+    if (f < 2) f += 0.1;
+  },
   saturationDown: () => {
     if (s > 0) s -= 10;
   },
@@ -229,6 +233,9 @@ const controlConditions = {
   },
   brightnessDown: () => {
     if (b > 0) b -= 10;
+  },
+  blurDown: () => {
+    if (f > 0.1) f -= 0.1;
   },
 };
 
@@ -258,7 +265,7 @@ elements.RESET_BUTTON.addEventListener("click", () => {
   s = vhsMode ? 100 : 100;
   c = vhsMode ? 100 : 120;
   b = vhsMode ? 110 : 100;
-  f = vhsMode ? 0.9 : 0.8;
+  f = vhsMode ? 1.5 : 0.8;
   updateSettings();
   showOSD();
 });

@@ -182,7 +182,7 @@ const toggleVHSMode = () => {
     s = 100;
     c = 100;
     b = 110;
-    f = 0.9;
+    f = 1.5;
     vhsSettings = "sepia(0.1) grayscale(0.1) hue-rotate(13deg)";
     updateSettings();
     elements.VHS_FILTER.style.visibility = "visible";
@@ -262,7 +262,7 @@ elements.RESET_BUTTON.addEventListener("click", () => {
   s = vhsMode ? 100 : 100;
   c = vhsMode ? 100 : 120;
   b = vhsMode ? 110 : 100;
-  f = vhsMode ? 0.9 : 0.7;
+  f = vhsMode ? 1.5 : 0.7;
   updateSettings();
   showOSD();
 });

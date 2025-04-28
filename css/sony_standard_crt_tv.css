@@ -208,8 +208,13 @@ button:hover {
   margin: 20px;
 }
 .crt-top {
-  background: linear-gradient(to bottom, #363636 20%, #242424 100%);
-  border-radius: 15px 15px 0 0;
+  background: linear-gradient(
+    to bottom,
+    #4b4a4a 10%,
+    #363636 20%,
+    #242424 100%
+  );
+  border-radius: 20px 20px 0 0;
   width: 100%;
   height: 60px;
   position: relative;
@@ -217,7 +222,7 @@ button:hover {
 .crt-top span {
   color: #8b8b8b;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   position: absolute;
   top: 38px;
   left: 80px;
@@ -478,13 +483,44 @@ button:hover {
   border-radius: 0 0 10% 10%;
   flex-direction: column;
   width: 100%;
-  padding: 0px 0px 17px 0px;
+  padding: 0px 0px 13px 0px;
   z-index: 1;
+  position: relative;
 }
+
+/* Stickers */
+.stickers {
+  position: absolute;
+  z-index: 3;
+  filter: brightness(85%);
+}
+.modnations-racer {
+  width: 90px;
+  top: 10px;
+  left: 100px;
+}
+.yui {
+  width: 90px;
+  top: 20px;
+  left: 5px;
+}
+.non-non-biyori {
+  width: 100px;
+  top: 10px;
+  right: 250px;
+}
+.kirby {
+  width: 45px;
+  top: 23px;
+  right: 20px;
+}
+
+/* Brand */
 .crt-brand-container {
   width: 135px;
   height: 39px;
   position: relative;
+  margin-top: 5px;
 }
 .crt-brand {
   padding: 3px;
@@ -507,8 +543,8 @@ button:hover {
 
 .crt-bottom-bottom {
   border: 2px solid #161616;
-  width: 660px;
-  height: 45px;
+  width: 680px;
+  height: 50px;
   margin-top: 10px;
 }
 .function-buttons {
@@ -530,15 +566,23 @@ button:hover {
   cursor: url("/images/cursors/link.cur"), auto;
 }
 #powerSwitch {
-  width: 60px;
-  margin-right: 5px;
+  background: linear-gradient(0deg, #1d1c1c 24%, #2c2c2c 72%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #141414;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 }
-#flickerMode {
-  width: 80px;
+#powerSwitch img {
+  width: 15px;
 }
 .led-lights {
-  width: 13px;
-  height: 13px;
+  border-radius: 100%;
+  width: 10px;
+  height: 12px;
 }
 #powerLED {
   background: #15ff00;
@@ -548,13 +592,14 @@ button:hover {
   background: black;
 }
 .crt-stand-arm {
-  background: linear-gradient(180deg, #0c0c0c 24%, #202020 72%);
+  background: linear-gradient(180deg, #0c0c0c 24%, #141414 72%);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
-  width: 80%;
-  height: 10px;
+  width: 90%;
+  height: 13px;
   margin-bottom: -5px;
   border-radius: 0 0 45% 45%;
-  z-index: 1;
+  margin-top: -3px;
+  z-index: 0;
 }
 
 /* Table */
