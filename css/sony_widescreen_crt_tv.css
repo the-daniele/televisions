@@ -176,7 +176,6 @@ button:hover {
 .buttons-groups-div,
 .function-buttons,
 .function-buttons-div,
-.composite-ports,
 .crt-text-container,
 .inputs-container,
 .inputs-container div {
@@ -273,13 +272,13 @@ button:hover {
   margin-top: 6px;
 }
 .c-yellow {
-  border: 3px solid #cece0a;
+  border: 3px solid #e5e74e;
 }
 .c-white {
-  border: 3px solid #dfdfdf;
+  border: 3px solid #f3f0eb;
 }
 .c-red {
-  border: 3px solid #c00202;
+  border: 3px solid #fe5656;
 }
 .crt-speakers {
   background-size: 4px 4px;
@@ -644,9 +643,6 @@ button:hover {
 }
 #powerSwitch img {
   width: 10px;
-}
-#flickerMode {
-  width: 80px;
 }
 .led-lights {
   border-radius: 100%;

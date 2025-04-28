@@ -176,7 +176,6 @@ button:hover {
 .buttons-groups-div,
 .function-buttons,
 .function-buttons-div,
-.composite-ports,
 .crt-text-container,
 .inputs-container,
 .inputs-container div {
@@ -193,8 +192,7 @@ button:hover {
 .crt-bottom,
 .crt-bottom-bottom,
 .buttons-groups-div,
-.pressable-buttons,
-.composite-ports {
+.pressable-buttons {
   background: linear-gradient(0deg, #1b1b1b 24%, #242424 72%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b4aeac",endColorstr="#c6bfbd",GradientType=1);
 }
