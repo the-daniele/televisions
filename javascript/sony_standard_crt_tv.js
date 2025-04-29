@@ -34,7 +34,7 @@ const sounds = {
   CRT_WHINE: new Audio("/sounds/whine.mp3"),
 };
 
-sounds.VHS_NOISE_SOUND.volume = 0.3;
+sounds.VHS_NOISE_SOUND.volume = 0.1;
 sounds.RF_NOISE_SOUND.volume = 0.04;
 sounds.CRT_WHINE.volume = 0.4;
 
