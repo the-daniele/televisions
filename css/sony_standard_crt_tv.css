@@ -219,13 +219,12 @@ button:hover {
   height: 60px;
   position: relative;
 }
-.crt-top span {
-  color: #8b8b8b;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.1em;
+.trinitron-logo {
   position: absolute;
-  top: 38px;
-  left: 80px;
+  top: 42px;
+  left: 75px;
+  width: 70px;
+  filter: brightness(700%) saturate(0);
 }
 
 .crt-middle-left,
