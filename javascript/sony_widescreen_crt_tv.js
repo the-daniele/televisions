@@ -42,7 +42,7 @@ let tvOff = true;
 let s = 100,
   c = 120,
   b = 100,
-  f = 0.7;
+  f = 0.5;
 let vhsSettings = "sepia(0) grayscale(0) hue-rotate(5deg)";
 let hideTimeoutId, timerInterval;
 let vhsMode = false,
@@ -168,7 +168,7 @@ const toggleVHSMode = () => {
   if (elements.VHS_FILTER.style.visibility === "visible") {
     elements.VHS_FILTER.style.visibility = "hidden";
     elements.VHS_FILTER_2.style.visibility = "hidden";
-    (s = 100), (c = 120), (b = 100), (f = 0.7);
+    (s = 100), (c = 120), (b = 100), (f = 0.5);
     vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";
     updateSettings();
     elements.OSD_INPUT_3.style.display = "none";
@@ -262,7 +262,7 @@ elements.RESET_BUTTON.addEventListener("click", () => {
   s = vhsMode ? 100 : 100;
   c = vhsMode ? 100 : 120;
   b = vhsMode ? 110 : 100;
-  f = vhsMode ? 1.5 : 0.7;
+  f = vhsMode ? 1.5 : 0.5;
   updateSettings();
   showOSD();
 });
@@ -367,7 +367,7 @@ elements.PLAY_LINK_BUTTON.addEventListener("click", () => {
   elements.VHS_LED.style.boxShadow = "none";
   elements.OSD_INPUT_3.style.display = "none";
   elements.OSD_INPUT_4.style.display = "none";
-  (s = 100), (c = 120), (b = 100), (f = 0.7);
+  (s = 100), (c = 120), (b = 100), (f = 0.5);
   vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";
   updateSettings();
   stopTimer();
@@ -409,7 +409,7 @@ elements.FILE_UPLOAD_BUTTON.addEventListener("click", () => {
     elements.VHS_LED.style.boxShadow = "none";
     elements.OSD_INPUT_3.style.display = "none";
     elements.OSD_INPUT_4.style.display = "none";
-    (s = 100), (c = 120), (b = 100), (f = 0.7);
+    (s = 100), (c = 120), (b = 100), (f = 0.5);
     vhsSettings = "sepia(0) grayscale(0) hue-rotate(0)";
     updateSettings();
     stopTimer();
