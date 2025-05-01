@@ -381,8 +381,8 @@ button:hover {
     linear-gradient(
       90deg,
       rgba(255, 0, 0, 0.2),
-      rgba(0, 255, 0, 0.12),
-      rgba(0, 0, 255, 0.14)
+      rgba(0, 255, 0, 0.1),
+      rgba(0, 0, 255, 0.2)
     );
   z-index: 4;
   background-size: 100% 2px, 2px 100%;

@@ -409,7 +409,7 @@ button:hover {
   visibility: hidden;
 }
 #screendoorEffect {
-  box-shadow: inset 0px 0px 1px 10px black;
+  box-shadow: inset 0px 0px 0px 11px black;
   position: absolute;
   z-index: 4;
   pointer-events: none;
@@ -426,8 +426,8 @@ button:hover {
     linear-gradient(
       90deg,
       rgba(255, 0, 0, 0.2),
-      rgba(0, 255, 0, 0.12),
-      rgba(0, 0, 255, 0.14)
+      rgba(0, 255, 0, 0.1),
+      rgba(0, 0, 255, 0.2)
     );
   z-index: 4;
   background-size: 100% 2px, 2px 100%;
