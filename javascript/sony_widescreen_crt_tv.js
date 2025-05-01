@@ -36,7 +36,7 @@ const sounds = {
 
 sounds.VHS_NOISE_SOUND.volume = 0.1;
 sounds.RF_NOISE_SOUND.volume = 0.04;
-sounds.CRT_WHINE.volume = 0.4;
+sounds.CRT_WHINE.volume = 0.2;
 
 let tvOff = true;
 let s = 100,
@@ -130,8 +130,9 @@ const togglePower = () => {
     sounds.CRT_WHINE.pause();
   } else {
     sounds.DEGAUSS.play();
+    sounds.CRT_WHINE.play();
+    crtWhineOn = true;
     tvOff = false;
-    if (crtWhineOn) sounds.CRT_WHINE.play();
     showOSDInput();
     elements.STATIC.style.pointerEvents = "none";
     elements.VIDEO_OUTPUT.style.display = "block";
@@ -145,7 +146,6 @@ const togglePower = () => {
       elements.OSD_INPUT_4.style.display = "block";
       sounds.VHS_NOISE_SOUND.play();
     }
-    if (crtWhineOn) sounds.CRT_WHINE.play();
   }
 };
 
