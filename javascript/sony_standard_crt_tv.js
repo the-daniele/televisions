@@ -130,7 +130,6 @@ const togglePower = () => {
     sounds.CRT_WHINE.pause();
   } else {
     sounds.DEGAUSS.play();
-    sounds.CRT_WHINE.play();
     tvOff = false;
     showOSDInput();
     elements.STATIC.style.pointerEvents = "none";
