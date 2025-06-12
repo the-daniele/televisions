@@ -22,6 +22,7 @@ const elements = {
   FILE_UPLOAD_BUTTON: document.getElementById("fileUpload"),
   BACKGROUND_BUTTON: document.getElementById("backgroundChanger"),
   SUGGESTIONS_BUTTON: document.getElementById("suggestions"),
+  STICKERS_BUTTON: document.getElementById("stickersButton"),
   INSTRUCTIONS_BUTTON: document.getElementById("instructions"),
 };
 
@@ -465,6 +466,23 @@ elements.SUGGESTIONS_BUTTON.addEventListener("click", () => {
       "\n" +
       "https://archive.org/embed/k-on-animax-dub"
   );
+});
+
+// Stickers Button
+let stickers_on = false;
+
+elements.STICKERS_BUTTON.addEventListener("click", () => {
+  if (stickers_on) {
+    document.querySelectorAll(".stickers").forEach((element) => {
+      element.style.display = "none";
+    });
+    stickers_on = false;
+  } else {
+    document.querySelectorAll(".stickers").forEach((element) => {
+      element.style.display = "block";
+    });
+    stickers_on = true;
+  }
 });
 
 // Function to allow the user to upload a custom wallpaper

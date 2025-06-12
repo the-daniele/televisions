@@ -488,6 +488,7 @@ button:hover {
 
 /* Stickers */
 .stickers {
+  display: none;
   position: absolute;
   z-index: 3;
   filter: brightness(85%);
@@ -632,7 +633,7 @@ button:hover {
   border: 1px solid #3b3b3b;
   color: white;
   padding: 3px 5px 5px 5px;
-  width: 300px;
+  width: 215px;
   height: 20px;
 }
 #fileInput {
@@ -668,6 +669,7 @@ button:hover {
 #instructions img,
 #fileUpload img,
 #suggestions img,
+#stickersButton img,
 #backgroundChanger img {
   width: 20px;
   margin-right: 4px;
