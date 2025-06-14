@@ -359,7 +359,6 @@ elements.PLAY_LINK_BUTTON.addEventListener("click", () => {
   const inputUrl = document.getElementById("crtInput").value.trim();
   elements.VIDEO_OUTPUT.src = getEmbeddedYouTubeURL(inputUrl);
   commonPlaySetup();
-  sounds.CRT_WHINE.play();
   sounds.VHS_NOISE_SOUND.pause();
   elements.VHS_FILTER.style.visibility = "hidden";
   elements.VHS_FILTER_2.style.visibility = "hidden";
@@ -402,7 +401,6 @@ elements.FILE_UPLOAD_BUTTON.addEventListener("click", () => {
   if (file && file.type.startsWith("video/")) {
     elements.VIDEO_OUTPUT.src = URL.createObjectURL(file);
     commonPlaySetup();
-    sounds.CRT_WHINE.play();
     sounds.VHS_NOISE_SOUND.pause();
     elements.VHS_FILTER.style.visibility = "hidden";
     elements.VHS_FILTER_2.style.visibility = "hidden";
