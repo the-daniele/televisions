@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Panasonic Standard CRT Television Simulator</title>
+    <meta
+      name="description"
+      content="Play your own videos or games on this realistic CRT TV Simulator, powered by Javascript. You can play links or upload MP4 files. It simulates the aperture-grill and flickering (optional) of a CRT Television, it also has a VHS filter mode and picture settings control (saturation, contrast, etc)."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="darkreader-lock" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/televisions/images/favicons/standard_crt/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="shortcut icon"
+      href="/televisions/images/favicons/standard_crt/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/televisions/images/favicons/standard_crt/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="CRT TV" />
+    <link
+      rel="manifest"
+      href="/televisions/images/favicons/standard_crt/site.webmanifest"
+    />
+    <link
+      rel="canonical"
+      href="https://frutigeraeroarchive.org/televisions/panasonic_standard_crt_tv"
+    />
+    <link
+      rel="stylesheet"
+      href="/televisions/css/panasonic_standard_crt_tv.css"
+    />
+    <noscript>
+      <style>
+        .js-content {
+          display: none;
+        }
+        .non-js-content {
+          display: block;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <main id="crtMain">
+      <div class="crt-container">
+        <div class="crt-top">
+          <img
+            src="/televisions/images/trinitron.svg"
+            alt="Sony Trinitron"
+            class="trinitron-logo"
+          />
+        </div>
+
+        <div class="crt-middle">
+          <div class="crt-middle-left">
+            <div class="left-speakers"></div>
+          </div>
+
+          <div class="crt-middle-middle">
+            <span id="osdInput">AV1</span>
+            <span id="osdInput3"
+              >PLAY <img src="/televisions/images/vhs-play.png"
+            /></span>
+            <span id="osdInput4">00:00:00</span>
+            <span id="osd"></span>
+            <img
+              src="/televisions/images/static.gif"
+              class="js-content"
+              id="static"
+            />
+            <img src="/televisions/images/vhs.gif" id="vhsFilter" />
+            <img src="/televisions/images/vhs2.gif" id="vhsFilter2" />
+            <img src="/televisions/images/curved_screen.png" id="curvature" />
+            <div id="screendoorEffect"></div>
+            <div id="flickering"></div>
+
+            <!-- JS Version -->
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              class="js-content"
+              id="crtOutput"
+            ></iframe>
+
+            <!-- No JS Version -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/videoseries?si=bIjGw4pFVlJafWTg&amp;list=PLbiQ_Jf57CBW3ATsDnFijc5GvqHzHyG9j"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              id="crtOutputNonJS"
+              class="non-js-content"
+            ></iframe>
+          </div>
+
+          <div class="crt-middle-right">
+            <div class="right-speakers"></div>
+          </div>
+        </div>
+
+        <div class="crt-bottom">
+          <!-- Brand -->
+          <div class="crt-brand-container">
+            <img
+              src="/televisions/images/panasonic.png"
+              alt="Panasonic Logo"
+              title="Brand: Panasonic"
+              class="crt-brand"
+            />
+          </div>
+        </div>
+
+        <!-- DVD and VHS -->
+        <div class="crt-bottom-media">
+          <div class="media-dvd"></div>
+          <div class="media-vhs"></div>
+        </div>
+
+        <div class="crt-bottom-controls">
+          <div class="function-buttons">
+            <div class="buttons-groups-div">
+              <button
+                class="pressable-buttons"
+                id="saturationUp"
+                title="Saturation +10"
+              >
+                S+
+              </button>
+              <button
+                class="pressable-buttons"
+                id="saturationDown"
+                title="Saturation -10"
+              >
+                S-
+              </button>
+              <button
+                class="pressable-buttons"
+                id="contrastUp"
+                title="Contrast +10"
+              >
+                C+
+              </button>
+              <button
+                class="pressable-buttons"
+                id="contrastDown"
+                title="Contrast -10"
+              >
+                C-
+              </button>
+              <button
+                class="pressable-buttons"
+                id="brightnessUp"
+                title="Brightness +10"
+              >
+                B+
+              </button>
+              <button
+                class="pressable-buttons"
+                id="brightnessDown"
+                title="Brightness -10"
+              >
+                B-
+              </button>
+              <button class="pressable-buttons" id="blurUp" title="Blur +0.1">
+                Blur+
+              </button>
+              <button class="pressable-buttons" id="blurDown" title="Blur -0.1">
+                Blur-
+              </button>
+              <button class="pressable-buttons" id="reset" title="Reset Values">
+                Reset
+              </button>
+            </div>
+
+            <div class="buttons-groups-div">
+              <button
+                class="pressable-buttons"
+                id="zoomButton"
+                title="Fill in screen"
+              >
+                Zoom
+              </button>
+              <button class="pressable-buttons" id="vhsMode" title="VHS Filter">
+                VHS
+              </button>
+              <button
+                class="pressable-buttons"
+                id="noiseMode"
+                title="Film Grain / Noise"
+              >
+                Noise
+              </button>
+              <button
+                class="pressable-buttons"
+                id="whineMode"
+                title="15.7KHz Whine Sound"
+              >
+                Whine
+              </button>
+              <button
+                class="pressable-buttons"
+                id="flickerMode"
+                title="CRT Flickering"
+              >
+                Flicker
+              </button>
+            </div>
+          </div>
+          <div class="buttons-groups-div">
+            <button class="led-lights" id="powerLED" title="Power LED"></button>
+            <button class="led-lights" id="vhsLED" title="VHS LED"></button>
+            <button
+              class="pressable-buttons"
+              id="powerSwitch"
+              title="Power Switch"
+            >
+              <img src="/televisions/images/power_light.png" alt="Power" />
+            </button>
+          </div>
+        </div>
+        <!-- Stand Arm -->
+        <div class="crt-stand-arm"></div>
+        <!-- Table -->
+        <div class="crt-table">
+          <div class="crt-text-container">
+            <div class="site-links">
+              <a href="/televisions.html" alt="My Website"
+                ><img
+                  src="/images/buttons/frutigeraeroarchive_button.png"
+                  alt="88x31 - Frutiger Aero Archive"
+                  title="Back to Frutiger Aero Archive" /></a
+              ><a
+                href="https://github.com/the-daniele/televisions"
+                target="_blank"
+                ><img
+                  src="/images/buttons/github.png"
+                  alt="88x31 - GitHub"
+                  title="Github Page"
+                />
+              </a>
+            </div>
+
+            <div class="inputs-container">
+              <div>
+                <input
+                  type="text"
+                  id="crtInput"
+                  placeholder="(embed src=) or YouTube URL here:"
+                  title="On websites that propose it, you can find the embed button and paste the src link that is between quotations"
+                />
+                <button id="avInput" title="Play current URL">
+                  <img
+                    src="/televisions/images/embed.png"
+                    alt="Network Symbol"
+                  />
+                  Embed
+                </button>
+                <button id="suggestions" title="Embed Suggestions">
+                  <img
+                    src="/televisions/images/suggestions.png"
+                    alt="Media Symbol"
+                  />
+                  Suggestions
+                </button>
+                <button id="stickersButton" title="Toggle Stickers">
+                  <img
+                    src="/televisions/images/stickers.png"
+                    alt="Image Symbol"
+                  />
+                  Stickers
+                </button>
+              </div>
+
+              <div>
+                <input
+                  type="file"
+                  id="fileInput"
+                  title="Import a video file here"
+                />
+                <button id="fileUpload" title="Play current file">
+                  <img src="/televisions/images/upload.png" alt="Disc Symbol" />
+                  Upload MP4
+                </button>
+                <button id="backgroundChanger" title="Change Background Image">
+                  <img
+                    src="/televisions/images/background.png"
+                    alt="Background Symbol"
+                  />
+                  Wallpaper
+                </button>
+                <button id="instructions" title="Instructions">
+                  <img src="/televisions/images/help.png" alt="i Symbol" />Help
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="non-js-content no-js-warning"
+          >Enable Javascript for the buttons to work.</span
+        >
+      </div>
+    </main>
+    <script
+      src="/televisions/javascript/standard_crt_tv.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>
