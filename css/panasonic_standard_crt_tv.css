@@ -629,17 +629,23 @@ button:hover {
   margin-right: 13px;
 }
 
+.function-buttons div {
+  height: 10px;
+}
+
 /* Buttons */
 .buttons-groups-div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: -35px 7px 0px 7px;
+  margin: -40px 7px 0px 7px;
+}
+.buttons-groups-div div {
+  display: flex;
 }
 .buttons-groups-div span {
-  font-size: 0.5em;
-  margin-bottom: -9px;
+  font-size: 8px;
 }
 .buttons-groups-div button {
   background: linear-gradient(
@@ -653,12 +659,10 @@ button:hover {
   border-left: 2px solid #161616;
   border-right: 2px solid #161616;
   border-bottom: 2px solid #161616;
-  width: 25px;
-  height: 15px;
-  font-weight: bold;
+  min-width: 27px;
+  min-height: 15px;
   cursor: url("/images/cursors/link.cur"), auto;
-  margin-right: -3.5px;
-  margin-left: -3.5px;
+  margin: 2px -1px 0px -1px;
 }
 .buttons-groups-div button:hover {
   background: linear-gradient(
