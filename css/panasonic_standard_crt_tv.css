@@ -660,6 +660,15 @@ button:hover {
   margin-right: -3.5px;
   margin-left: -3.5px;
 }
+.buttons-groups-div button:hover,
+.buttons-groups-div button:focus {
+  background: linear-gradient(
+    to bottom,
+    #525252 00%,
+    #d6d5d5 10%,
+    #d1d1d1 100%
+  );
+}
 
 .buttons-led-lights {
   display: flex;
