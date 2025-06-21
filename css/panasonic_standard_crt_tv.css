@@ -675,8 +675,8 @@ button:hover {
 }
 
 .led-lights {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
 }
 #powerLED {
   background: #15ff00;
@@ -687,6 +687,15 @@ button:hover {
   height: 12px;
   margin-right: 10px;
 }
+
+.leds-container {
+  display: flex;
+  align-items: center;
+  margin-top: -19px;
+}
+.leds-container span {
+  margin-top: -9px;
+}
 #vhsLED {
   background: black;
 }
@@ -696,18 +705,15 @@ button:hover {
   justify-content: center;
   align-items: center;
   font-size: 0.4em;
-  margin-top: -25px;
 }
-
 .empty-led-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -25px -50px 0px 0px;
+  margin: 0px -50px 0px -2px;
 }
 .empty-led-container div {
   background: black;
-  margin-top: 9px;
   margin-left: 10px;
 }
 
