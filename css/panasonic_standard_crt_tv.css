@@ -691,10 +691,10 @@ button:hover {
 .leds-container {
   display: flex;
   align-items: center;
-  margin-top: -19px;
+  margin-top: -18px;
 }
 .leds-container span {
-  margin-top: -9px;
+  margin-top: -9.5px;
 }
 #vhsLED {
   background: black;
@@ -704,7 +704,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.4em;
+  font-size: 6px;
 }
 .empty-led-container {
   display: flex;
