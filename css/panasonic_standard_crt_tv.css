@@ -660,8 +660,7 @@ button:hover {
   margin-right: -3.5px;
   margin-left: -3.5px;
 }
-.buttons-groups-div button:hover,
-.buttons-groups-div button:focus {
+.buttons-groups-div button:hover {
   background: linear-gradient(
     to bottom,
     #525252 00%,
