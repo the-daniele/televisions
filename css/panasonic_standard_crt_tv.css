@@ -172,7 +172,6 @@ button:hover {
 .crt-middle-right,
 .crt-middle-middle,
 .crt-bottom,
-.buttons-groups-div,
 .function-buttons,
 .function-buttons-div,
 .crt-text-container,
@@ -188,9 +187,7 @@ button:hover {
 .crt-middle-right {
   background-color: #b9b9bd;
 }
-.crt-bottom,
-.buttons-groups-div,
-.pressable-buttons {
+.crt-bottom {
   background: linear-gradient(0deg, #9b9ba0 24%, #b9b9bd 72%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b4aeac",endColorstr="#c6bfbd",GradientType=1);
 }
@@ -206,45 +203,48 @@ button:hover {
   margin: 20px;
 }
 .crt-top {
-  background: linear-gradient(
-    to bottom,
-    #d8d8dd 10%,
-    #9b9ba0 20%,
-    #b9b9bd 100%
-  );
-  border-radius: 20px 20px 0 0;
+  background: linear-gradient(to bottom, #a6a6ac 0%, #9b9ba0 30%, #b9b9bd 100%);
+  border-radius: 10px 10px 0 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   position: relative;
 }
-.trinitron-logo {
+.tau-logo {
   position: absolute;
-  top: 42px;
-  left: 75px;
-  width: 70px;
-  filter: brightness(700%) saturate(0);
+  top: 23px;
+  left: 98px;
+  width: 45px;
 }
 
 .crt-middle-left,
 .crt-middle-right {
   border-radius: 2px;
   width: 10px;
-  height: 510px;
+  height: 512px;
   position: relative;
 }
 .crt-middle-left {
-  background: linear-gradient(to left, #a1a1a8 20%, #b9b9bd 100%);
+  background: linear-gradient(to left, #78787e 20%, #b9b9bd 100%);
   justify-content: flex-end;
   padding-left: 6px;
 }
 .crt-middle-right {
-  background: linear-gradient(to right, #a1a1a8 20%, #b9b9bd 100%);
+  background: linear-gradient(to right, #78787e 20%, #b9b9bd 100%);
   justify-content: flex-start;
   padding-right: 6px;
 }
 .left-speakers,
 .right-speakers {
-  background: #807f7f;
+  background-color: #898989;
+  opacity: 1;
+  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #6a6a6a 0,
+    #6a6a6a 0.4px,
+    #898989 0,
+    #898989 50%
+  );
   width: 65px;
   height: 100%;
   position: absolute;
@@ -347,10 +347,14 @@ button:hover {
 #flickering,
 #vhsFilter,
 #vhsFilter2,
-#screendoorEffect,
-#curvature {
+#screendoorEffect {
   width: 659px;
   height: 502px;
+}
+#curvature {
+  width: 649px;
+  height: 492px;
+  border: 10px solid black;
 }
 #static {
   z-index: 1;
@@ -497,37 +501,9 @@ button:hover {
   position: relative;
 }
 
-/* Stickers */
-.stickers {
-  display: none;
-  position: absolute;
-  z-index: 3;
-  filter: brightness(85%);
-}
-.modnation-racers {
-  width: 90px;
-  top: 10px;
-  left: 100px;
-}
-.yui {
-  width: 90px;
-  top: 20px;
-  left: 5px;
-}
-.non-non-biyori {
-  width: 100px;
-  top: 10px;
-  right: 250px;
-}
-.kirby {
-  width: 45px;
-  top: 23px;
-  right: 20px;
-}
-
 /* Brand */
 .crt-brand-container {
-  width: 135px;
+  width: 120px;
   height: 30px;
 }
 .crt-brand {
@@ -540,7 +516,13 @@ button:hover {
 }
 
 .crt-bottom-media {
-  background: linear-gradient(to bottom, #aeaeb4 5%, #a5a5a8 10%, #a5a5a8 100%);
+  background: linear-gradient(
+    to bottom,
+    #424244 5%,
+    #a5a5a8 10%,
+    #a5a5a8 95%,
+    #6a6a6d 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -549,89 +531,203 @@ button:hover {
 }
 
 .media-dvd {
-  background: #8a8a8d;
-  border: 1px solid #636363;
+  background: #a3a2a5;
+  border: 2px solid #686769;
   width: 200px;
   height: 30px;
-  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .media-vhs {
-  background: #8a8a8d;
-  border: 1px solid #636363;
-  width: 250px;
-  height: 43px;
+  background: #a3a2a5;
+  border: 2px solid #686769;
+  width: 280px;
+  height: 35px;
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 6px;
+}
+.media-vhs-lines {
+  background: #8a898b;
+  width: 2px;
+  height: 90%;
+}
+.dvd-video-img {
+  background: #cfcfcf;
+  border-top: 2px solid #838383;
+  border-bottom: 2px solid #d4d4d4;
+  border-left: 2px solid #acabab;
+  border-right: 2px solid #acabab;
+  width: 28px;
+  padding: 3px;
+}
+.vhs-omnivision-img {
+  width: 110px;
+}
+.triple-play-img {
+  width: 70px;
+  margin-left: 20px;
+  margin-right: -90px;
 }
 
 .crt-bottom-controls {
   background: linear-gradient(
     to bottom,
-    #fbfbfc 5%,
+    #dddadc 5%,
     #a5a5a8 70%,
-    #7a7a7a 70%,
-    #c4c4c4 100%
+    #919090 70%,
+    #525252 100%
   );
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  border-top: 1px solid #686868;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 97%;
-  height: 90px;
-  margin-bottom: 30px;
+  width: 98%;
+  height: 80px;
 }
 
-.function-buttons {
-  margin-top: 4px;
+/* Composite */
+.composite-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.4em;
+  margin: -15px 3px 0px 0px;
 }
+.composite-inputs div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-sound {
+  background: #000000;
+  border: 4px solid #666666;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+.c-video,
+.c-audio-l,
+.c-audio-r {
+  background: #000000;
+  border: 3px solid #8f8f8f;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.star-logo {
+  width: 15px;
+  margin-right: 13px;
+}
+
+/* Buttons */
 .buttons-groups-div {
-  margin: 0px 6px 0px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: -35px 7px 0px 7px;
+}
+.buttons-groups-div span {
+  font-size: 0.5em;
+  margin-bottom: -9px;
 }
 .buttons-groups-div button {
-  color: #414141;
+  background: linear-gradient(
+    to bottom,
+    #525252 00%,
+    #b9b9b9 10%,
+    #b9b9b9 100%
+  );
+  border-radius: 2px;
   border-top: 2px solid #161616;
   border-left: 2px solid #161616;
   border-right: 2px solid #161616;
   border-bottom: 2px solid #161616;
-  padding: 2px 4px 3px 4px;
-  margin: 0px 2px;
-  font-size: 0.7em;
+  width: 25px;
+  height: 15px;
   font-weight: bold;
   cursor: url("/images/cursors/link.cur"), auto;
+  margin-right: -3.5px;
+  margin-left: -3.5px;
 }
-#powerSwitch {
-  background: linear-gradient(0deg, #1d1c1c 24%, #2c2c2c 72%);
+
+.buttons-led-lights {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #141414;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
+  margin: -20px 0px -10px 10px;
 }
-#powerSwitch img {
-  width: 15px;
-}
+
 .led-lights {
-  border-radius: 100%;
-  width: 10px;
-  height: 12px;
+  width: 7px;
+  height: 7px;
 }
 #powerLED {
   background: #15ff00;
+  border: 1px solid green;
   box-shadow: 1px 1px 20px 1px #15ff00;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
 }
 #vhsLED {
   background: black;
 }
+.vhs-led-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.4em;
+  margin-top: -25px;
+}
+
+.empty-led-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -25px -50px 0px 0px;
+}
+.empty-led-container div {
+  background: black;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.bottom-right-logos {
+  margin: 3px 0px 0px -18px;
+}
+.bottom-right-logos img {
+  width: 30px;
+}
+
+/* Base */
 .crt-stand-arm {
-  background: linear-gradient(180deg, #0c0c0c 24%, #141414 72%);
+  background: #3b3b3b;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
-  width: 90%;
-  height: 13px;
+  width: 96.5%;
+  height: 8px;
   margin-bottom: -5px;
-  border-radius: 0 0 45% 45%;
-  margin-top: -3px;
+  z-index: 0;
+}
+
+.crt-stand {
+  background: linear-gradient(180deg, #838383 24%, #636262 72%);
+  border-bottom: 5px solid #797979;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  width: 97%;
+  height: 10px;
+  margin-bottom: -5px;
+  border-radius: 2px 2px 0px 0px;
   z-index: 0;
 }
 
@@ -645,11 +741,11 @@ button:hover {
     #38291c 0,
     #38291c 50%
   );
-  border-top: 28px solid #42301f;
+  border-top: 25px solid #42301f;
   border-radius: 0 0 5px 5px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.253);
-  width: 95%;
-  margin-top: -15px;
+  width: 99%;
+  margin-top: -10px;
 }
 .crt-text-container {
   gap: 12px;
@@ -667,7 +763,7 @@ button:hover {
   border: 1px solid #3b3b3b;
   color: white;
   padding: 3px 5px 5px 5px;
-  width: 215px;
+  width: 300px;
   height: 20px;
 }
 #fileInput {

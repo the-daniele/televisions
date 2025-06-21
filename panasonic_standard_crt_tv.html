@@ -53,11 +53,7 @@
     <main id="crtMain">
       <div class="crt-container">
         <div class="crt-top">
-          <img
-            src="/televisions/images/trinitron.svg"
-            alt="Sony Trinitron"
-            class="trinitron-logo"
-          />
+          <img src="/televisions/images/tau.png" alt="Tau" class="tau-logo" />
         </div>
 
         <div class="crt-middle">
@@ -125,114 +121,213 @@
 
         <!-- DVD and VHS -->
         <div class="crt-bottom-media">
-          <div class="media-dvd"></div>
-          <div class="media-vhs"></div>
+          <div class="media-dvd">
+            <img
+              src="images/dvd_video.png"
+              alt="DVD VIDEO"
+              class="dvd-video-img"
+            />
+          </div>
+          <div class="media-vhs">
+            <div class="media-vhs-lines"></div>
+            <img
+              src="images/vhs_omnivision.png"
+              alt="VHS OMNIVISION"
+              class="vhs-omnivision-img"
+            />
+            <div class="media-vhs-lines"></div>
+          </div>
+
+          <img
+            src="images/triple_play.png"
+            alt="Triple Play"
+            class="triple-play-img"
+          />
         </div>
 
         <div class="crt-bottom-controls">
+          <div class="composite-inputs">
+            <span>VIDEO IN 2 L-AUDIO IN 2-R</span>
+            <div>
+              <div class="c-video"></div>
+              <div class="c-audio-l"></div>
+              <div class="c-audio-r"></div>
+            </div>
+          </div>
+
+          <img src="images/star_logo.png" alt="Star Logo" class="star-logo" />
+
           <div class="function-buttons">
             <div class="buttons-groups-div">
-              <button
-                class="pressable-buttons"
-                id="saturationUp"
-                title="Saturation +10"
-              >
-                S+
-              </button>
-              <button
-                class="pressable-buttons"
-                id="saturationDown"
-                title="Saturation -10"
-              >
-                S-
-              </button>
-              <button
-                class="pressable-buttons"
-                id="contrastUp"
-                title="Contrast +10"
-              >
-                C+
-              </button>
-              <button
-                class="pressable-buttons"
-                id="contrastDown"
-                title="Contrast -10"
-              >
-                C-
-              </button>
-              <button
-                class="pressable-buttons"
-                id="brightnessUp"
-                title="Brightness +10"
-              >
-                B+
-              </button>
-              <button
-                class="pressable-buttons"
-                id="brightnessDown"
-                title="Brightness -10"
-              >
-                B-
-              </button>
-              <button class="pressable-buttons" id="blurUp" title="Blur +0.1">
-                Blur+
-              </button>
-              <button class="pressable-buttons" id="blurDown" title="Blur -0.1">
-                Blur-
-              </button>
-              <button class="pressable-buttons" id="reset" title="Reset Values">
-                Reset
-              </button>
+              <span>POWER</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  title="Power Switch"
+                  id="powerSwitch"
+                ></button>
+              </div>
             </div>
 
             <div class="buttons-groups-div">
-              <button
-                class="pressable-buttons"
-                id="zoomButton"
-                title="Fill in screen"
-              >
-                Zoom
-              </button>
-              <button class="pressable-buttons" id="vhsMode" title="VHS Filter">
-                VHS
-              </button>
-              <button
-                class="pressable-buttons"
-                id="noiseMode"
-                title="Film Grain / Noise"
-              >
-                Noise
-              </button>
-              <button
-                class="pressable-buttons"
-                id="whineMode"
-                title="15.7KHz Whine Sound"
-              >
-                Whine
-              </button>
-              <button
-                class="pressable-buttons"
-                id="flickerMode"
-                title="CRT Flickering"
-              >
-                Flicker
-              </button>
+              <span>SATURATION</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="saturationDown"
+                  title="Saturation -10"
+                ></button>
+                <button
+                  class="pressable-buttons"
+                  id="saturationUp"
+                  title="Saturation +10"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>CONTRAST</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="contrastDown"
+                  title="Contrast -10"
+                ></button>
+                <button
+                  class="pressable-buttons"
+                  id="contrastUp"
+                  title="Contrast +10"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>BRIGHTNESS</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessDown"
+                  title="Brightness -10"
+                ></button>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessUp"
+                  title="Brightness +10"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>SHARPNESS</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="blurDown"
+                  title="Blur -0.1"
+                ></button>
+                <button
+                  class="pressable-buttons"
+                  id="blurUp"
+                  title="Blur +0.1"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>RESET</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="reset"
+                  title="Reset Values"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>ZOOM</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="zoomButton"
+                  title="Fill in screen"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>VHS</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="vhsMode"
+                  title="VHS Filter"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>NOISE</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="noiseMode"
+                  title="Film Grain / Noise"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>WHINE</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="whineMode"
+                  title="15.7KHz Whine Sound"
+                ></button>
+              </div>
+            </div>
+
+            <div class="buttons-groups-div">
+              <span>FLICKER</span>
+              <div>
+                <button
+                  class="pressable-buttons"
+                  id="flickerMode"
+                  title="CRT Flickering"
+                ></button>
+              </div>
             </div>
           </div>
-          <div class="buttons-groups-div">
-            <button class="led-lights" id="powerLED" title="Power LED"></button>
-            <button class="led-lights" id="vhsLED" title="VHS LED"></button>
-            <button
-              class="pressable-buttons"
-              id="powerSwitch"
-              title="Power Switch"
-            >
-              <img src="/televisions/images/power_light.png" alt="Power" />
-            </button>
+
+          <div class="buttons-led-lights">
+            <div class="led-lights" id="powerLED" title="Power LED"></div>
+
+            <div class="vhs-led-container">
+              <span>VHS</span>
+              <div class="led-lights" id="vhsLED" title="VHS LED"></div>
+            </div>
+
+            <div class="empty-led-container">
+              <div class="led-lights" title="Blank LED"></div>
+              <div class="led-lights" title="Blank LED"></div>
+              <div class="led-lights" title="Blank LED"></div>
+            </div>
+          </div>
+
+          <div class="bottom-right-logos">
+            <img src="images/dolby_digital.png" alt="Dolby Digital" />
+            <img src="images/dts.png" alt="DTS" />
+            <img
+              src="images/compact_disc.png"
+              alt="Compact Disc Digital Audio"
+            />
+            <img src="images/ram.png" alt="RAM" />
           </div>
         </div>
         <!-- Stand Arm -->
         <div class="crt-stand-arm"></div>
+        <div class="crt-stand"></div>
         <!-- Table -->
         <div class="crt-table">
           <div class="crt-text-container">
@@ -274,13 +369,6 @@
                     alt="Media Symbol"
                   />
                   Suggestions
-                </button>
-                <button id="stickersButton" title="Toggle Stickers">
-                  <img
-                    src="/televisions/images/stickers.png"
-                    alt="Image Symbol"
-                  />
-                  Stickers
                 </button>
               </div>
 
