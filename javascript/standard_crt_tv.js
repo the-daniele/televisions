@@ -449,6 +449,11 @@ elements.SUGGESTIONS_BUTTON.addEventListener("click", () => {
     "Here's some cool stuff you can embed by pasting the URLs in the input field and pressing the embed button." +
       "\n" +
       "\n" +
+      "Windows 7:" +
+      "\n" +
+      "https://win7simu.visnalize.com/" +
+      "\n" +
+      "\n" +
       "Windows 98:" +
       "\n" +
       "https://98.js.org/" +
