@@ -1,4 +1,3 @@
-Source code for the CRT TVs at https://frutigeraeroarchive.org/televisions
-For local use only, do not re-publish on your own website unless you actually make it look different, and if so, please credit me.
+Source code for the CRT TVs at https://frutigeraeroarchive.org/televisions, You're free to use the code for your own project if you credit me. Please do not re-publish the whole thing on your website.
 
 <img src="thumbnail.jpg" alt="Preview">
