@@ -136,7 +136,7 @@ const togglePower = () => {
     elements.STATIC.style.pointerEvents = "none";
     elements.VIDEO_OUTPUT.style.display = "block";
     elements.VIDEO_OUTPUT.src =
-      "https://www.youtube-nocookie.com/embed/videoseries?si=s6ACIjBIWzRHCBcn&amp;list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp&autoplay=1";
+      "https://www.youtube-nocookie.com/embed/videoseries?si=u7BR3QGfiQCExzJq&amp;list=PLbiQ_Jf57CBW3ATsDnFijc5GvqHzHyG9j&autoplay=1";
     elements.STATIC.style.opacity = rfNoise ? "0.05" : "0";
     if (rfNoise) sounds.RF_NOISE_SOUND.play();
     if (vhsMode) {
@@ -530,7 +530,7 @@ function chooseWallpaper() {
     // Trigger the file input to open the file chooser
     input.click();
   } else {
-    document.body.style.background = `url("/televisions/images/crt-room.jpg") no-repeat center center fixed`;
+    document.body.style.background = `url("/televisions/images/background.jpg") no-repeat center center fixed`;
     document.body.style.backgroundSize = "cover";
     document.body.style.mozBackgroundSize = "cover";
     document.body.style.oBackgroundSize = "cover";

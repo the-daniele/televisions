@@ -145,7 +145,7 @@
 }
 body {
   background-color: #303030;
-  background: url("/televisions/images/crt-room.jpg") no-repeat center center
+  background: url("/televisions/images/background.jpg") no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
